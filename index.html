@@ -6,22 +6,52 @@
     <title>JS DOM EVENTS</title>
 </head>
 <body>
+    
     <h1 onclick="console.log("I am clicked")">If you click on me you will get an error,
         because you used string with double quotation marks. If you do use single quotation marks 
         the error will be resolved</h1>
-
-    <h1 onclick="console.log('I am clicked')">DOM er ajke special events!</h1>
-    <hr>
+    <!-- ===================================================================== -->
+    <!-- <hr>
     <h3>Command ⌘ + alt ⌥ (option) + i  </h3>
     <h3>fn button + F12 </h3>
-    <hr>
+    <hr> -->
+    <!-- ===================================================================== -->
+    
+    <!-- Option #1: Add onclick directly on the HTML element -->
     <button onclick="console.log(7)">Click Me 1</button>
-    <br>
-    <br>
+    <br><br>
     <button title="This is a tooltip function you used" onclick="console.log(15)">Hover Me For Tooltip</button>
-    <br>
-    <br>
+    <br><br>
     <button onclick="console.log(65)">Click Me 3</button>
+    <br><br>
+    <button onclick="document.body.style.backgroundColor = 'Yellow'">Make Yellow 4</button>
+    <br><br>
+
+    <!-- Option #2: Add onclick function on HTML element (We Will use this option) -->
+    <button onclick="makeRed()">Make Red 5</button>
+    <br><br>
+    <button onclick="makeOlive()">Make Olive 6</button>
+    <br><br>
+
+    <!-- Option #4: Add onclick function -->
+    <button id="make-blue">Make Blue 7</button>
+    <br><br>
+    <!-- Option #5: Add onclick function -->
+    <button id="make-purple">Make Purple 8</button>
+    <br><br>
+    <!-- Option #6: Add addEventListener function -->
+    <button id="make-pink">Make Pink 9</button>
+    <br><br>
+    <!-- Option #7: Add addEventListener function -->
+    <button id="make-green">Make Green 10</button>
+    <br><br>
+    <!-- Option #8: Add addEventListener function -->
+    <button id="make-goldenrod">Make Goldenrod 11</button>
+
     <script src="js/events.js"></script>
+    <script>
+
+        
+    </script>
 </body>
 </html>
