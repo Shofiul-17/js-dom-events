@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM Summary</title>
+</head>
+<body>
+    <!-- ===================================================================== -->
+    <!-- <hr>
+    <h3>Command ⌘ + alt ⌥ (option) + i  </h3>
+    <h3>fn button + F12 </h3>
+    <hr> -->
+    <!-- ===================================================================== -->
+    <h1>Final DOM Event Handlers</h1>
+    <h3 id="handler-status">Default Text</h3>
+    <p id="default-text-display">Default Input Text!</p>
+    <input id="input-field" type="text">
+    <button id="button-update">Update</button>
+    <br><br>
+    <button onclick="handleOnClick()">Handle Event by add onclick Function</button>
+    <br><br>
+    <button id="event-listener">Handle Event by addEventListener</button>
+    <script>
+        /* function handleOnClick(){
+            console.log('Button clicked');
+        } */
+        function handleOnClick(){
+            // console.log('Button clicked');
+            const handlerStatus = document.getElementById('handler-status');
+            handlerStatus.innerText = 'Handled by function attached on onclick attribute'
+        }
+
+        document.getElementById('event-listener').addEventListener('click', function(){
+            const handlerStatus = document.getElementById('handler-status');
+            handlerStatus.innerText = 'Text updated by add listener button';
+        })
+
+        document.getElementById('button-update').addEventListener('click', function(){
+            // console.log('update button clicked');
+            const inputField = document.getElementById('input-field');
+            // console.log(inputField.innerText);
+            console.log(inputField.value);
+            const inputText = inputField.value;
+            const defaultTextDisplay = document.getElementById('default-text-display');
+            defaultTextDisplay.innerText = inputText;
+            inputField.value = '';
+        })
+    </script>
+</body>
+</html>
