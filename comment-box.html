@@ -25,6 +25,11 @@
     </div>
     <script>
         // Step #1. Add event listener to the post button. Post button clicked.
+        // Step #2. new comment stored. Or Get the comment inside the text area.
+        // Step #3. Set the comment inside the comments container. #3 has 4 sub steps.
+        // Step #4. Clear the text area box.
+
+        // Step #1. Add event listener to the post button. Post button clicked.
         document.getElementById('btn-post').addEventListener('click', function(){
             console.log('Post button clicked');
 
@@ -43,7 +48,7 @@
                 
             // Step #3.1 -- Get the comment container.
             const commaentContainer = document.getElementById('comment-container'); // Step #3.1 -- Get the comment container.
-            // Step #3.2 -- Create a new element using createElement method (Means, create <p></p> tag).
+            // Step #3.2 -- Create a new element tag using createElement method (Means, create <p></p> tag).
             const p = document.createElement('p')
             console.log(p);
             // Step #3.3 -- Set the text. (Means, the comment as innerText of the <p> tag).
