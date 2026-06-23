@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Events</title>
+</head>
+<body>
+    <!-- ===================================================================== -->
+    <!-- <hr>
+    <h3>Command ⌘ + alt ⌥ (option) + i  </h3>
+    <h3>fn button + F12 </h3>
+    <hr> -->
+    <!-- ===================================================================== -->
+
+    <h1>Explore More Events</h1>
+
+    <!-- <p>Click on the delete button.</p>
+    <button id="btn-delete">Delete</button>
+
+    <p>Move or enter the mouse in the following delete-1 button.</p>
+    <button id="btn-delete1">Delete-1</button> -->
+
+    <!-- <p>Move the mouse pointer on the delete-2 button.</p>
+    <button id="btn-delete2">Delete-2</button>
+    <br> -->
+
+    <!-- <p>click on the input field to focus!</p>
+    <input id="input-field" type="text">
+    <br> -->
+
+    <!-- <p>Click on the input field-2 and after that, click on the outside of the input field to blur!</p>
+    <input id="input-field2" type="text">
+    <br> -->
+
+    <!-- <p>Type on the input field-3 to check keydown event! (Is it down or up? It might be a bit heard to understand On the console tab. To understand this, you need to use the "keyup" event)</p>
+    <input id="input-field3-keydown" type="text"> -->
+
+    <!-- <br>
+    <p>Type on the input field-4 to check keypress event! (It might be a bit heard to understand On the console tab. To understand this, you need to use the "keyup" event)</p>
+    <input id="input-field4-keypress" type="text"> -->
+
+    <br>
+    <p>Type on the input field-3 to check keyup event!</p>
+    <input id="input-field3" type="text">
+    <script>
+        /* document.getElementById('btn-delete').addEventListener('click', function(){
+            console.log('Delete button clicked!');
+        })
+        document.getElementById('btn-delete1').addEventListener('mouseenter', function(){
+            console.log('Mouse pointer entered in delete-1 button! And you can see in the left side the number will Increase each time the mouse pointer moves over the button.');
+        }) */
+
+        /* document.getElementById('btn-delete2').addEventListener('mousemove', function(){
+            console.log('Mouse pointer is moving on delete-2 button! And you can see in the left side the number will keep increasing as long as the mouse pointer hovers over the button.');
+        }) */
+
+        /* document.getElementById('input-field').addEventListener('focus', function(){
+            console.log('Input field focused!');
+        }) */
+
+        /* document.getElementById('input-field2').addEventListener('blur', function(){
+            console.log('Input field-2 blur when you click on the outside of the input field! And you can see on the left will increase each time you click outside the input field');
+        }) */
+        
+
+        /* document.getElementById('input-field3-keydown').addEventListener('keydown', function(){
+            console.log('Entered letter in the Input field-3!');
+        }) */
+
+        /* document.getElementById('input-field3-keydown').addEventListener('keydown', function(event){
+            // console.log('Entered letter in the Input field-3!');
+            console.log(event);
+        }) */
+
+        /* document.getElementById('input-field3-keydown').addEventListener('keydown', function(event){
+            // console.log('Entered letter in the Input field-3!');
+            console.log(event.target);
+        }) */
+
+        /* document.getElementById('input-field3-keydown').addEventListener('keydown', function(event){
+            // console.log('Entered letter in the Input field-3!');
+            console.log(event.target.value);
+        }) */
+
+        /* document.getElementById('input-field4-keypress').addEventListener('keypress', function(event){
+            // console.log('Entered letter in the Input field-3!');
+            console.log(event.target.value);
+        }) */
+
+        document.getElementById('input-field3').addEventListener('keyup', function(event){
+            // console.log('Entered letter in the Input field-3!');
+            console.log(event.target.value);
+        })
+    </script>
+    
+</body>
+</html>
