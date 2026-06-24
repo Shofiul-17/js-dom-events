@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ===================================================================== -->
+    <!-- <hr>
+    <h3>Command ⌘ + alt ⌥ (option) + i  </h3>
+    <h3>fn button + F12 </h3>
+    <hr> -->
+    <!-- ===================================================================== -->
+    <!-- <h1 id="secret-info">My secret info</h1>
+    <input type="text">
+    <button id="btn-delete">Delete</button> -->
+
+    <h1 id="secret-info2">My secret info2</h1>
+    <input id="delete-confirm" type="text" placeholder="please type delete">
+    <button id="btn-delete2" disabled>Delete-2</button>
+    <script>
+        /* document.getElementById('btn-delete').addEventListener('click', function(){
+            console.log('Delete button kaaj kore!');
+            const secret = document.getElementById('secret-info');
+            secret.style.display = 'none';
+        }) */
+
+        document.getElementById('delete-confirm').addEventListener('keyup', function(event){
+            console.log(event.target.value);
+            const text = event.target.value;
+            console.log(text);
+            const deleteButton = document.getElementById('btn-delete2');
+            if(text === 'delete'){
+                deleteButton.removeAttribute('disabled');
+            }
+            else{
+                deleteButton.setAttribute('disabled', true);
+            }
+            
+        })
+        document.getElementById('btn-delete2').addEventListener('click', function(){
+            console.log('Delete-2 button kaaj kore!');
+            const secret2 = document.getElementById('secret-info2');
+            secret2.style.display = 'none';
+            const inputField = document.getElementById('delete-confirm');
+            inputField.value = '';
+        })
+    </script>
+</body>
+</html>
