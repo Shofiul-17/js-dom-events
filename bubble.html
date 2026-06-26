@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubble</title>
+    <style>
+        #body{
+            border: 3px solid black;
+        }
+        #section-list-container{
+            border: 3px solid red;
+            margin: 5px;
+        }
+        #list-ul{
+            border: 3px solid lightseagreen;
+            margin: 5px;
+        }
+        #item-2{
+            border: 3px solid darkorange;
+        }
+    </style>
+</head>
+<body id="body">
+    <h1>Exploring Event Bubble</h1>
+    <!-- section>ul>li#item-$*6>lorem2 -->
+    <section id="section-list-container">
+        <ul id="list-ul">
+            <li id="item-1">Lorem, ipsum.</li>
+            <li id="item-2">Esse, illo?</li>
+            <li id="item-3">Modi, deserunt!</li>
+            <li id="item-4">Minus, voluptatum?</li>
+            <li id="item-5">Nobis, totam.</li>
+            <li id="item-6">Numquam, ducimus.</li>
+        </ul>
+    </section>
+    <script>
+        document.getElementById('item-2').addEventListener('click', function(event){
+            console.log('Item-2 li paise!');
+            // event.stopPropagation();
+            event.stopImmediatePropagation();
+        })
+        document.getElementById('item-2').addEventListener('click', function(event){
+            console.log('Item-2 second paise!');
+        })
+        document.getElementById('item-2').addEventListener('click', function(event){
+            console.log('Item-2 third paise!');
+        })
+        document.getElementById('item-2').addEventListener('click', function(event){
+            console.log('Item-2 fourth paise!');
+        })
+        document.getElementById('item-2').addEventListener('click', function(event){
+            console.log('Item-2 fifth paise!');
+        })
+
+
+        document.getElementById('list-ul').addEventListener('click', function(){
+            console.log('Ul list paise!');
+        })
+        document.getElementById('section-list-container').addEventListener('click', function(){
+            console.log('Section list container paise!');
+        })
+        document.getElementById('body').addEventListener('click', function(){
+            console.log('Body Section paise!');
+        })
+    </script>
+</body>
+</html>
