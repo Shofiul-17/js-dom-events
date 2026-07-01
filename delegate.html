@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegate</title>
+</head>
+<body>
+    <h1>Expllore Event Delegate</h1>
+    <!-- section>ul#list-container>li.item*6>lorem3 -->
+    <section>
+        <ul id="list-container">
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Tempore, quas adipisci!</li>
+            <li class="item">Saepe, dolorem sequi.</li>
+            <li class="item">Autem, magni tenetur!</li>
+            <li class="item">Iste, delectus pariatur.</li>
+            <li class="item">Magni, architecto nam!</li>
+        </ul>
+        <button id="btn-add-item">Add Item</button>
+    </section>
+    <script>
+        const items = document.getElementsByClassName('item');
+        // console.log(items);
+        /* for(const item of items){
+            console.log(item);
+        } */
+        /* for(const item of items){
+            item.addEventListener('click', function(){
+                console.log(item);
+            })
+        } */
+        /* for(const item of items){
+            item.addEventListener('click', function(event){
+                console.log(event.target);
+            })
+        } */
+        /* for(const item of items){
+            item.addEventListener('click', function(event){
+                console.log(event.target.parentNode);
+            })
+        } */
+        for(const item of items){
+            item.addEventListener('click', function(event){
+                event.target.parentNode.removeChild(event.target);
+            })
+        }
+
+        document.getElementById('btn-add-item').addEventListener('click', function(){
+            const ulListContainer = document.getElementById('list-container');
+
+            const liNew = document.createElement('li');
+            liNew.innerText = 'Brand New Item Added';
+            liNew.classList.add('item');
+            ulListContainer.appendChild(liNew);
+        })
+    </script>
+</body>
+</html>
