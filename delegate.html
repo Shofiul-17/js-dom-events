@@ -6,6 +6,23 @@
     <title>Event Delegate</title>
 </head>
 <body>
+    <!-- ===================================================================== -->
+    <!-- <hr>
+    <h3>Command ⌘ + alt ⌥ (option) + i  </h3>
+    <h3>fn button + F12 </h3>
+    <hr> -->
+    <!-- ===================================================================== -->
+    <!-- ===================================================================== -->
+    <!-- 
+    Command ⌘  + J     - To **open** Vs code Terminal window tab (For Mac)
+    Command ⌘  + J     -  Press again to **close** Vs code Terminal window tab (For Mac)
+
+    Ctrl ⌃ (**control ⌃) + ` (**backtick**) —  To **open** Vs code Terminal window tab (For Mac)
+    Ctrl ⌃ (**control ⌃) + ` (**backtick**) —  Press again to **close** Vs code Terminal window tab (For Mac)
+     -->
+    <!-- ===================================================================== -->
+     
+    
     <h1>Expllore Event Delegate</h1>
     <!-- section>ul#list-container>li.item*6>lorem3 -->
     <section>
@@ -17,34 +34,67 @@
             <li class="item">Iste, delectus pariatur.</li>
             <li class="item">Magni, architecto nam!</li>
         </ul>
+        <!-- btn#btn-add-item{Add Item} -->
         <button id="btn-add-item">Add Item</button>
     </section>
     <script>
-        const items = document.getElementsByClassName('item');
+        /* const items = document.getElementsByClassName('item'); */
         // console.log(items);
+
         /* for(const item of items){
             console.log(item);
         } */
+
         /* for(const item of items){
             item.addEventListener('click', function(){
                 console.log(item);
             })
         } */
+
         /* for(const item of items){
             item.addEventListener('click', function(event){
                 console.log(event.target);
             })
         } */
+
         /* for(const item of items){
             item.addEventListener('click', function(event){
                 console.log(event.target.parentNode);
             })
         } */
-        for(const item of items){
+
+        /* for(const item of items){
             item.addEventListener('click', function(event){
                 event.target.parentNode.removeChild(event.target);
             })
-        }
+        } */
+
+        /* =============================================================== */
+
+        /* const ulListContainer = document.getElementById('list-container');
+        ulListContainer.addEventListener('click', function(){
+            console.log(ulListContainer);
+        }) */
+
+        /* const ulListContainer = document.getElementById('list-container');
+        ulListContainer.addEventListener('click', function(event){
+            console.log(event.target);
+        }) */
+
+        /* const ulListContainer = document.getElementById('list-container');
+        ulListContainer.addEventListener('click', function(event){
+            event.target.parentNode.removeChild(event.target);
+        }) */
+       
+       /* =============================================================== */
+        /* ====== You can use only above OR below code ====== */
+        /* =============================================================== */
+
+        document.getElementById('list-container').addEventListener('click', function(event){
+            // console.log(event.target);
+            event.target.parentNode.removeChild(event.target);
+        })
+        /* =============================================================== */
 
         document.getElementById('btn-add-item').addEventListener('click', function(){
             const ulListContainer = document.getElementById('list-container');
@@ -54,6 +104,12 @@
             liNew.classList.add('item');
             ulListContainer.appendChild(liNew);
         })
+
+        /* document.getElementById('list-container').addEventListener('click', function(event){
+            if(event.target.tagName === 'LI'){
+                event.target.remove();
+            }
+        }) */
     </script>
 </body>
 </html>
